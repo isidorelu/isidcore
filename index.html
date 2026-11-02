@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ISIDCORE — Creative Studio & Blog</title>
+      <meta name="description" content="Isidcore is a New York–based creative studio and blog founded by Isidore Lu (isid or). Music, film, live events, and writing on culture, arts, and technology." />
+      <meta name="author" content="Isidore Lu (isid or)" />
+      <meta name="robots" content="index, follow" />
+      <link rel="icon" href="https://isidorelu.com/prof-pic.jpg" type="image/jpeg" />
+
+      <meta property="og:title" content="ISIDCORE — Creative Studio & Blog" />
+      <meta property="og:description" content="Music, film, live events, and writing. New York." />
+      <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
+      <meta property="og:url" content="https://isidcore.isidorelu.com" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="ISIDCORE — Creative Studio & Blog" />
+      <meta name="twitter:description" content="Music, film, live events, and writing. New York." />
+
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Isidcore",
+            "url": "https://isidcore.isidorelu.com",
+            "founder": { "@type": "Person", "name": "Isidore Lu", "alternateName": "isid or", "url": "https://isidorelu.com" },
+            "sameAs": ["https://isidcore.substack.com/", "https://instagram.com/isidcore"]
+         }
+      </script>
+
+      <style>
+         * { box-sizing: border-box; }
+         html { -webkit-text-size-adjust: 100%; }
+         body {
+            margin: 0;
+            background: #fff;
+            color: #000;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+         }
+         a { color: #000; text-underline-offset: 2px; }
+         a:hover { background: #000; color: #fff; text-decoration: none; }
+         main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+
+         marquee { border-bottom: 1px solid #000; padding: 6px 0; font-size: 13px; letter-spacing: 0.02em; }
+
+         header.top { padding: 48px 0 24px; border-bottom: 1px solid #000; }
+         header.top h1 { font-size: 2.6em; letter-spacing: -0.02em; line-height: 1; margin: 0 0 8px; }
+         header.top .sub { margin: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+         nav { margin-top: 20px; font-size: 14px; }
+         nav a { margin-right: 14px; }
+
+         section { padding: 36px 0; border-bottom: 1px solid #000; }
+         h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 20px; }
+         h3 { font-size: 1.15em; margin: 0; }
+         p { margin: 0 0 1em; }
+         .lede { font-size: 1.25em; line-height: 1.4; }
+
+         /* figures row */
+         .figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #000; border-left: 1px solid #000; margin-top: 24px; }
+         .figures div { border-right: 1px solid #000; border-bottom: 1px solid #000; padding: 12px; }
+         .figures b { display: block; font-size: 1.8em; line-height: 1.1; }
+         .figures span { font-size: 13px; }
+
+         /* work index */
+         .work { list-style: none; margin: 0; padding: 0; }
+         .work > li { display: grid; grid-template-columns: 44px 1fr; gap: 0 12px; padding: 22px 0; border-top: 1px solid #000; }
+         .work > li:first-child { border-top: 0; padding-top: 0; }
+         .num { font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 3px; }
+         .meta { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; margin: 4px 0 10px; }
+         .roles { font-size: 14px; margin: 8px 0 0; }
+         .roles b { font-weight: 700; }
+         .media { margin: 14px 0 4px; }
+         .media img { width: 100%; max-width: 420px; display: block; border: 1px solid #000; }
+         .video { position: relative; width: 100%; padding-top: 56.25%; border: 1px solid #000; margin: 14px 0 4px; }
+         .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+         .merch { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; margin: 14px 0 6px; }
+         .merch a { text-decoration: none; font-size: 12px; line-height: 1.3; }
+         .merch a:hover { background: none; color: #000; text-decoration: underline; }
+         .merch img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 1px solid #000; margin-bottom: 6px; background: #f4f4f4; }
+         details { margin-top: 12px; font-size: 14px; }
+         summary { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+         dl.credits { display: grid; grid-template-columns: max-content 1fr; gap: 2px 16px; margin: 12px 0 0; }
+         dl.credits dt { font-weight: 700; }
+         dl.credits dd { margin: 0; }
+         dl.credits .gap { grid-column: 1 / -1; height: 10px; }
+
+         ul.plain { list-style: none; padding: 0; margin: 0; }
+         ul.plain li { padding: 6px 0; border-top: 1px solid #000; }
+         ul.plain li:first-child { border-top: 0; }
+
+         .services { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
+         .services h3 { font-size: 1em; margin-bottom: 4px; }
+         .services p { font-size: 14px; margin: 0; }
+
+         footer { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; font-size: 13px; }
+
+         @media (max-width: 560px) {
+            header.top h1 { font-size: 2em; }
+            .figures { grid-template-columns: repeat(2, 1fr); }
+            .services { grid-template-columns: 1fr; }
+            .work > li { grid-template-columns: 32px 1fr; }
+            dl.credits { grid-template-columns: 1fr; }
+            dl.credits dd { margin-bottom: 6px; }
+         }
+      </style>
+   </head>
+
+   <body>
+      <marquee scrollamount="5">
+         <strong>
+            IN 2026, ISIDCORE PRODUCED <u><em>1</em> MUSIC VIDEO</u>, RELEASED <u><em>1</em> MINI-ALBUM</u>, DROPPED <u><em>1</em> MERCH LINE</u>, SCORED <u><em>5</em> IMMERSIVE ACTIVATIONS</u> FOR KODANSHA HOUSE LA & NYC, & THREW <u><em>2</em> PARTIES</u> IN NEW YORK.
+         </strong>
+      </marquee>
+
+      <main>
+         <header class="top">
+            <h1>ISIDCORE</h1>
+            <p class="sub">Creative Studio &amp; Blog — New York</p>
+            <nav>
+               <a href="#work">Work</a>
+               <a href="#writing">Writing</a>
+               <a href="#services">Services</a>
+               <a href="#about">About</a>
+               <a href="#contact">Contact</a>
+            </nav>
+         </header>
+
+         <!-- STATEMENT -->
+         <section id="intro">
+            <p class="lede">
+               Isidcore is a creative studio and blog founded by <strong>Isidore Lu</strong> (<em>isid or</em>). The studio produces music, film, and live events where pop, Japanese culture, and technology meet. The blog publishes short writing on culture, arts, and technology.
+            </p>
+            <p>
+               Isidcore began as a blog on Substack and Instagram. In summer 2026 it became a production company. Its first project was a self-financed $10K campaign: a full-production music video, a Japanese mini-album, a merchandise line, and two release parties in New York. That same summer the studio took on its first corporate client, Kodansha. Isidcore is now open to commissions.
+            </p>
+
+            <div class="figures">
+               <div><b>1</b><span>full-production music video</span></div>
+               <div><b>1</b><span>Japanese mini-album</span></div>
+               <div><b>5</b><span>immersive audio activations for Kodansha</span></div>
+               <div><b>2</b><span>NYC events produced &amp; hosted</span></div>
+               <div><b>20+</b><span>cast &amp; crew directed on one shoot</span></div>
+               <div><b>$10K</b><span>self-financed campaign</span></div>
+            </div>
+         </section>
+
+         <!-- WORK -->
+         <section id="work">
+            <h2>Selected Work</h2>
+            <ol class="work">
+               <!-- 01 -->
+               <li>
+                  <span class="num">01</span>
+                  <div>
+                     <h3>“Everything” — isid or</h3>
+                     <p class="meta">Music video · 2026 · Isidcore with TABÚ Productions</p>
+                     <p>
+                        The lead single from <em>Sincerely, Mr. Love &amp; Pop</em>, filmed as a full narrative production with three models, three actors, two dancers, and a styling team of four, dressed from four archives. Isidcore financed and produced the video. Isidore was executive producer and creative director, and edited, color-graded, and sound-mixed the final cut himself.
+                     </p>
+
+                     <div class="video">
+                        <iframe src="https://www.youtube.com/embed/FJRkCm_5sII" title="isid or — Everything (Official Music Video)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     </div>
+
+                     <p class="roles"><b>Studio roles:</b> Production company · Executive producer · Creative direction · Edit · Color · Sound mix · Song (writing, co-production, mix &amp; master)</p>
+
+                     <details>
+                        <summary>Full credits</summary>
+                        <dl class="credits">
+                           <dt>EP / Creative Director</dt><dd>Isidore Lu</dd>
+                           <dt>Director / Writer</dt><dd>Tin Lee</dd>
+                           <dt>AD</dt><dd>Ellen Davis</dd>
+                           <dt>DOP</dt><dd>Jun-ting Zhou</dd>
+                           <dt>AC</dt><dd>Adriana Cuevas</dd>
+                           <dt>Production Company</dt><dd>Isidcore (with TABÚ Productions)</dd>
+                           <span class="gap"></span>
+                           <dt>Models</dt><dd>Klaire Pham, Malcolm XL, Arabella Landry</dd>
+                           <dt>Actors</dt><dd>Annabel Jones, Gagbert, Lisa Marinelli</dd>
+                           <dt>Dancers</dt><dd>Yujun Wu, Cindy Liu</dd>
+                           <dt>Choreographer</dt><dd>Yujun Wu</dd>
+                           <span class="gap"></span>
+                           <dt>Stylist</dt><dd>Tommy Do</dd>
+                           <dt>Stylist Assistants</dt><dd>Vincent Luu, Chuwei Zheng, Edgar Alejandro Barrios</dd>
+                           <dt>Wardrobe</dt><dd>Future Treasure, Shanice Archive, Roy Luo, Graeme Schneider</dd>
+                           <dt>Hair</dt><dd>Alexis Shan</dd>
+                           <dt>Makeup</dt><dd>Hinana Nishitomi</dd>
+                           <span class="gap"></span>
+                           <dt>Editor / Colorist / Sound Mixer</dt><dd>Isidore Lu</dd>
+                           <dt>BTS</dt><dd>Claire Su</dd>
+                           <dt>Key PA</dt><dd>Ellen Davis</dd>
+                           <dt>PAs</dt><dd>Klaire Pham, Chuwei Zheng, Claire Su</dd>
+                           <span class="gap"></span>
+                           <dt>Song</dt><dd>“Everything” by isid or, from <em>Sincerely, Mr. Love &amp; Pop</em></dd>
+                           <dt>Songwriter</dt><dd>Isidore Lu</dd>
+                           <dt>Producers</dt><dd>Janghoon, isid or</dd>
+                           <dt>Mix &amp; Master</dt><dd>Isidore Lu</dd>
+                           <span class="gap"></span>
+                           <dt>Special Thanks</dt><dd>Junlin Zhu, Tan Sawaddichai</dd>
+                        </dl>
+                     </details>
+                  </div>
+               </li>
+
+               <!-- 02 -->
+               <li>
+                  <span class="num">02</span>
+                  <div>
+                     <h3><em>Sincerely, Mr. Love &amp; Pop</em> — isid or</h3>
+                     <p class="meta">Japanese mini-album · 2026 · isid music / Isidcore</p>
+                     <p>
+                        A Japanese-language electronic pop record released through isid music, the studio's music label. Isidore wrote, co-produced, mixed, and mastered it himself. The video, both parties, and the press push were all planned around this release.
+                     </p>
+                     <p class="roles"><b>Studio roles:</b> Label · Songwriting · Production · Mix &amp; master · Campaign strategy</p>
+                     <p class="roles"><a href="https://isidorelu.com/love" target="_blank" rel="noopener">Listen →</a></p>
+                  </div>
+               </li>
+
+               <!-- 03 -->
+               <li>
+                  <span class="num">03</span>
+                  <div>
+                     <h3>Kodansha House — Los Angeles &amp; New York</h3>
+                     <p class="meta">Client work · 2026 · Audio supervision &amp; composition</p>
+                     <p>
+                        Kodansha, Japan's largest manga publisher, ran Kodansha House as a series of pop-up fan experiences. For its Los Angeles and New York (Hudson Yards) editions, Isidcore served as audio supervisor and composer, creating the music and immersive audio for all five activations. Each activation was built around one Kodansha property:
+                     </p>
+                     <ul class="plain" style="font-size: 14px; max-width: 360px">
+                        <li><em>Blue Lock</em></li>
+                        <li><em>AKIRA</em></li>
+                        <li><em>Attack on Titan</em></li>
+                        <li><em>Ghost in the Shell</em></li>
+                        <li><em>Witch Hat Atelier</em></li>
+                     </ul>
+                     <p class="roles"><b>Studio roles:</b> Audio supervisor · Composer · Immersive / spatial audio</p>
+                  </div>
+               </li>
+
+               <!-- 04 -->
+               <li>
+                  <span class="num">04</span>
+                  <div>
+                     <h3>Sincerely, Mr. Love &amp; Pop — End-of-Summer Party</h3>
+                     <p class="meta">Event · July 29, 2026 · Beverly's, New York</p>
+                     <p>
+                        A pre-release party for the mini-album, co-hosted with Blizzy McGuire and presented with Life After Trance. It ran 5pm to 2am. Isidore had met more than 300 creatives in New York since March, and the night was meant to bring them together in one room.
+                     </p>
+                     <p class="roles"><b>DJs:</b> Océane, Robyn Dabank, Cute Boys, Gagbert, Aster, Mini Lis</p>
+                     <p class="roles"><b>Studio roles:</b> Concept · Booking · Promotion · Host</p>
+                     <div class="media"><img src="https://pbs.twimg.com/media/HOMnc-8XQAAi3gn?format=jpg&amp;name=large" alt="Flyer for the Sincerely, Mr. Love & Pop end-of-summer party at Beverly's" loading="lazy" /></div>
+                  </div>
+               </li>
+
+               <!-- 05 -->
+               <li>
+                  <span class="num">05</span>
+                  <div>
+                     <h3>Isidcore: J-Pop Night @ Kodansha House</h3>
+                     <p class="meta">Event · October 15, 2026 · Kodansha House, Hudson Yards</p>
+                     <p>
+                        After the audio commission, Isidcore was invited back to program its own night inside the Kodansha House NYC pop-up. The set list covered J-pop, J-core, and anime openings across eras, from Hikaru Utada and Ayumi Hamasaki to Perfume, m-flo, and Crystal Kay. The night also promoted <em>Sincerely, Mr. Love &amp; Pop</em>.
+                     </p>
+                     <p class="roles"><b>DJs:</b> Aster, Bubucore, Cute Boys, Gagbert</p>
+                     <p class="roles"><b>Studio roles:</b> Programming · Booking · Promotion · Host</p>
+                     <div class="media"><img src="https://isidorelu.com/jpop_party.png" alt="Flyer for Isidcore J-Pop Night at Kodansha House" loading="lazy" /></div>
+                  </div>
+               </li>
+               <!-- 06 -->
+               <li>
+                  <span class="num">06</span>
+                  <div>
+                     <h3>isid or — Campaign Merchandise</h3>
+                     <p class="meta">Merchandise · 2026 · Isidcore</p>
+                     <p>
+                        Isidcore designed and produced several merch lines for the campaign and sells them through its online store. They include the “Early Investor in isid or” T-shirts in two designs, the NUGU NUMBERS collection with its “Who are you?” shirts, and a T-shirt for the Isidcore J-Pop Night at Kodansha House. Product photography is by Claire Su.
+                     </p>
+                     <!-- PLACEHOLDER: images load from the store's image server; swap for self-hosted files when ready -->
+                     <div class="merch">
+                        <a href="https://store.isidorelu.com/products/early-investor-in-isid-or-t-shirt-black" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/sVq-hF44CZq23BifXOsJfYtPVx4g4kdE2XkYflEkUdI/w:1920/sm:1/enc/1mCNRXq1ImIT34X2/xhEwuNvSjgMwdz4f/2lLgIzzivYJelDi3/z5HNM96IAqlU6jVH/c8Uy6B1ONXmENrQp/G_Ew7V7QLLSnYjsO/v812qbjcRhjIvY68/2_LjK8VasrbrkrsT/bc1ayyDCaZx50ejZ/pAtIpM3tl_3zLdHr/AtNrm82IAFXlZmfA/c0Wf3rJ37_3C1RG1/XqDwzNI58GlaO5aH/pEZE1IDF8UAHWLm2/0ymV7bOjNaM.jpg" alt="“Early Investor in isid or” T-shirt" loading="lazy" /><span>“Early Investor in isid or” T-shirt</span></a>
+                        <a href="https://store.isidorelu.com/products/early-investor-in-isid-or-t-shirt-alternative-design-black" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/bjBwuLBGn_cLX-ibDDYI8QZFkmCO583VLUP1px1sEsc/w:1200/sm:1/enc/APi83Luehn9e7Gtk/juE8LsuXPnUxJx2c/H9QWbm8hhNN65PBZ/uhss5VKfhNXRwh2h/aGvgSYTnIMOdQyOt/kT3xDOUgnonu3fFq/yAgZzycqiIHQ02TL/mf0RuKvQr6VJDTQy/6CgGRLTtpOCCpzNI/VzWrD5G4UbrXSPlk/99Ch2sO1QOaU6beE/fClsjVT6_ux4dk1r/Ju3FAUg9UFPuEf07/RtkoL41JwquKGBrn/KR-kkRdQQks.png" alt="“Early Investor” T-shirt, alternate design" loading="lazy" /><span>“Early Investor” T-shirt, alternate design</span></a>
+                        <a href="https://store.isidorelu.com/products/nugu-numbers-t-shirt-black" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/jE8qgJ4Ds0183PybTn4cypQ4XmLgFi0qwsnLeWYRFR0/w:1200/sm:1/enc/aAyANGpnHwQSlKGp/3VOii6ULN63x8wd1/udexVgG_QR1p3CI3/xSYEatLLGSN8OM3E/sbdBuHXJ6Z5GvMuB/TYlQwfO16IYvnAFP/bfngrFzYoNMyKB5P/v218zwPrTLrb3IH_/S275CUUZuCJESesf/_dRtkoUzGBEXmrYd/4NKkwJZy5cXd9yao/RnfKnyU9zwq6fIQn/TFhKCDBglcxglIdg/361_t04y0VOY8mcN/KQ8tI4PcZ-4.png" alt="NUGU NUMBERS T-shirt" loading="lazy" /><span>NUGU NUMBERS T-shirt</span></a>
+                        <a href="https://store.isidorelu.com/products/who-are-you-t-shirt-black" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/d76NRscs0I5uvVqz8R1xZ_n3naVEy8r0JY4aDDwNaYQ/w:1200/sm:1/enc/IPZMQ6skgAwRQ6Fz/tYycAlUfdTr2QMJs/f0ZHaEEb0RttiiMK/5u6ztDNIftPE4szI/hz9JQagEVCX5tRAa/vj4mhqes-aKXXVdp/uIdfHERAsPXbxJjk/F-Gcb-m_08WRG24w/JhUxlnJeN_CPYcJL/hIuuiPWOm3WnfBlJ/SRrcsDl_85ojCiMU/g8mIAAdVn5Qof7rO/8WjryqyFH9dhiRhM/yBt_64EZlUHz7wdc/F-jfB3Qvtqk.png" alt="NUGU NUMBERS: “Who are you?” T-shirt" loading="lazy" /><span>NUGU NUMBERS: “Who are you?” T-shirt</span></a>
+                        <a href="https://store.isidorelu.com/products/isidcore-j-pop-night-kodansha-house-t-shirt" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/byc_O_EQGib9m0p0wYHiK0bYRDMUis_Xw2AXf5z3y_Q/w:1200/sm:1/enc/6f9nB7zO5sDHLstZ/pl2Hp1GS8P23MmjB/gMe7m64y9T01ZMKZ/DS4cwMLKJ3RHDkcl/dP51MjOSrhrpKK7n/n9KUnhPgjV6VD-t-/f-fUcfHLU6bIe0Y3/OoksX4uz7o7pKaCC/SAVIHHpyj2-Gpqyl/BipVaffKxIAU-Zt-/BNjeqxuDSyh_USgX/IJrMWVdpfvlNN_4W/W8Zrz6X4FJ5_-jZ_/HTP2BxtP3MAH0-Hq/efpTSbWo3F8.png" alt="J-Pop Night @ Kodansha House T-shirt" loading="lazy" /><span>J-Pop Night @ Kodansha House T-shirt</span></a>
+                     </div>
+                     <p class="roles"><b>Studio roles:</b> Design · Product development · Production · Online store</p>
+                     <p class="roles"><a href="https://store.isidorelu.com/" target="_blank" rel="noopener">Shop →</a></p>
+                  </div>
+               </li>
+            </ol>
+            <p style="font-size: 14px; margin-top: 16px">Event archive: <a href="https://isidorelu.com/pop.html">isidorelu.com/pop</a></p>
+         </section>
+
+         <!-- WRITING -->
+         <section id="writing">
+            <h2>Writing</h2>
+            <p>
+               The blog is where Isidcore started, and it keeps going alongside the studio work. It runs essays and dispatches on Substack and short curated posts on Instagram, covering culture, arts, technology, and New York.
+            </p>
+            <ul class="plain">
+               <li><strong>Substack</strong> — <a href="https://isidcore.substack.com/" target="_blank" rel="noopener">isidcore.substack.com</a></li>
+               <li><strong>Instagram</strong> — <a href="https://instagram.com/isidcore" target="_blank" rel="noopener">@isidcore</a></li>
+            </ul>
+         </section>
+
+         <!-- SERVICES -->
+         <section id="services">
+            <h2>Services — Open for Commissions</h2>
+            <div class="services">
+               <div>
+                  <h3>Creative Direction &amp; Production</h3>
+                  <p>Music videos, campaigns, shoots, and merchandise: concept, budget, crew, and delivery.</p>
+               </div>
+               <div>
+                  <h3>Music &amp; Audio</h3>
+                  <p>Composition, production, mixing and mastering, and immersive audio for installations and live experiences.</p>
+               </div>
+               <div>
+                  <h3>Post-Production</h3>
+                  <p>Editing, color grading, and sound mixing for music video and short-form film.</p>
+               </div>
+               <div>
+                  <h3>Events</h3>
+                  <p>Party and activation concepts, DJ booking, partnerships, and hosting in New York.</p>
+               </div>
+               <div>
+                  <h3>Editorial</h3>
+                  <p>Cultural writing, curation, and copy for artists and brands.</p>
+               </div>
+            </div>
+         </section>
+
+         <!-- ABOUT -->
+         <section id="about">
+            <h2>About</h2>
+            <p>
+               <strong>Isidore Lu</strong> (<em>isid or</em>) is a musician, visual artist, and model based in New York. He writes, produces, and engineers his own electronic pop, and directs and edits the visuals that go with it. He founded Isidcore to run all of this work, and work for clients, under one studio.
+            </p>
+            <p>
+               He studies Music &amp; Technology at Carnegie Mellon University.
+            </p>
+            <p><a href="https://isidorelu.com">isidorelu.com →</a></p>
+         </section>
+
+         <!-- CONTACT -->
+         <section id="contact" style="border-bottom: 0">
+            <h2>Contact</h2>
+            <p class="lede">For commissions, collaborations, and press:</p>
+            <p><a href="mailto:isidorelu3@gmail.com">isidorelu3@gmail.com</a><br />Instagram: <a href="https://instagram.com/isidcore" target="_blank" rel="noopener">@isidcore</a></p>
+         </section>
+      </main>
+
+      <footer>© 2026 Isidcore · isid music · New York</footer>
+   </body>
+</html>
